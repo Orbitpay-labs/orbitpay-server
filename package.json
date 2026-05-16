@@ -1,0 +1,14 @@
+{
+  "name": "orbitpay-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MVP API scaffold for OrbitPay Kit C-address onboarding and payment intents.",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+
