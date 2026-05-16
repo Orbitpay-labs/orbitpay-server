@@ -10,17 +10,26 @@ This server exposes the API shape needed by the MVP client:
 - `POST /funding-sessions`
 - `POST /payment-intents`
 - `POST /webhooks/stellar`
-- `GET /contributor-issues`
+- `GET /integration-surfaces`
 
 The MVP stores data in memory. Production contributors should replace this with persistent storage, real Stellar RPC/Horizon lookups, webhook retries, auth, and merchant API keys.
 
 ## Run
 
 ```powershell
-node server.mjs
+node dist/server.mjs
 ```
 
 The API listens on `http://localhost:8787`.
+
+## TypeScript
+
+The API source lives in `src/server.mts` and compiles to `dist/server.mjs`.
+
+```powershell
+npm install
+npm run build
+```
 
 ## Contributor Tracks
 
@@ -29,4 +38,3 @@ The API listens on `http://localhost:8787`.
 - Add webhook retry queue.
 - Add merchant API key authentication.
 - Add unit tests and contract integration tests.
-
