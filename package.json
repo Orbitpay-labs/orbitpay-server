@@ -5,7 +5,11 @@
   "type": "module",
   "description": "MVP API scaffold for OrbitPay Kit C-address onboarding and payment intents.",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "npm run typecheck",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test",
+    "format:check": "node scripts/check-format.mjs",
+    "api:smoke": "npm run build && node scripts/api-smoke.mjs",
     "start": "node dist/server.mjs"
   },
   "devDependencies": {
